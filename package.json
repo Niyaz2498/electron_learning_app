@@ -1,0 +1,35 @@
+{
+  "name": "updatetester",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository":"git@github.com:Niyaz2498/electron_learning_app.git",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "build -p always"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.1"
+  },
+  "build": {
+    "appId": "com.github.niyaz2498.electronupdaterexample",
+    "mac": {
+      "category": "demo",
+      "publish": [{
+        "provider": "github",
+        "host": "github.com"
+        
+      }],
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    }
+  },
+  "dependencies": {
+    "electron-log": "^3.0.5",
+    "electron-updater": "^4.0.6"
+  }
+}
