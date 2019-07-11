@@ -1,0 +1,26 @@
+—————————
+
+Browser allows request to be made only from websites of same origin 
+In other words 
+Restricts how a script loaded from one origin interacts with the resource from other origin
+
+Origin : 
+	<scheme> “://” <hostname> [ “:” <port>]
+
+If the scheme or port or host changes browser restricts interaction
+
+Edge cases
+——————————
+Browser relaxes sop sometimes
+1. Image tag (src) .browser relax this 
+
+2. Cross - origin writes are allowed. e.g. post form submission.  
+3. Cross-Origin embedding are allowed. 
+4. Cross  origin reads are not allowed.
+
+Iframes -> cross -origin embedding 
+
+Preventing cross-origin writes 
+Use synchroniser  token
+(Safe since  cross-origin reads are not allowed )
+Don’t use wildcard in cors header
